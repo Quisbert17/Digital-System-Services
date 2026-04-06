@@ -1,0 +1,344 @@
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+    --color-bg: #071A2F;
+    --color-accent: #00CFFF;
+    --color-white: #f1f1f1;
+    --color-border: rgba(0, 207, 255, 0.2);
+}
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-white);
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background-color: rgba(7, 26, 47, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(7, 26, 47, 0.95) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* LOGO */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+/* TEXTO LOGO */
+.logo-text {
+    background: linear-gradient(90deg, #0d47a1, var(--color-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-carousel {
+    padding-top: 0px;
+}
+
+.hero-slide {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* CAPA OSCURA */
+#heroCarousel .hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* TEXTO SOBRE EL FONDO */
+#heroCarousel .hero-slide .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* IMÁGENES */
+#heroCarousel .carousel-item:nth-child(1) .hero-slide {
+    background-image: url('../img/soporte_tecnico.jpg');
+}
+
+#heroCarousel .carousel-item:nth-child(2) .hero-slide {
+    background-image: url('../img/mantenimiento_pcs.jpg');
+}
+
+#heroCarousel .carousel-item:nth-child(3) .hero-slide {
+    background-image: url('../img/diseño_web.jpg');
+}
+
+#heroCarousel .carousel-item:nth-child(4) .hero-slide {
+    background-image: url('../img/desarrollo_web.jpg');
+}
+
+/* TEXTO HERO */
+.hero-slide h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.hero-slide p {
+    max-width: 600px;
+    margin: auto;
+    color: #ccc;
+}
+
+/* BOTONES */
+.btn-success {
+    background: #00c853;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background: #00e676;
+    transform: scale(1.05);
+}
+
+.hero-slide .btn {
+    border-radius: 25px;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+.services {
+    background: var(--color-bg);
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    color: var(--color-white);
+    transition: 0.3s;
+    padding: 25px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 170, 255, 0.3);
+}
+
+.service-card i {
+    color: var(--color-accent);
+}
+/* BOTÓN PERSONALIZADO */
+
+.btn-custom {
+    background: rgba(0, 207, 255, 0.1);
+    border: 1px solid rgba(0, 207, 255, 0.5);
+    color: #00CFFF;
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background: #00CFFF;
+    color: #071A2F;
+}
+
+/* =========================
+   NOSOTROS
+========================= */
+#nosotros {
+    background-color: var(--color-bg);
+    padding: 80px 0;
+}
+
+#nosotros h2 {
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+#nosotros h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    margin: 10px auto 0;
+}
+
+#nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#nosotros img {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 207, 255, 0.2);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+#contacto {
+    background-color: var(--color-bg);
+    padding: 80px 0;
+}
+
+#contacto h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+#contacto h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--color-accent);
+    margin: 10px auto 0;
+}
+
+#contacto .form-control {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--color-border);
+    color: var(--color-white);
+    border-radius: 10px;
+}
+
+#contacto .form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+#contacto .btn-primary {
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 25px;
+}
+
+#contacto .btn-primary:hover {
+    background-color: rgba(0, 207, 255, 0.8);
+    transform: scale(1.05);
+    color: var(--color-bg);
+}
+
+#contacto i.text-info {
+    color: var(--color-accent);
+}
+
+/* =========================
+   BOTÓN WHATSAPP
+========================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background: #25D366;
+    transform: scale(1.1);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* SELECT PERSONALIZADO */
+#contacto select.form-control {
+    background-color: rgba(255,255,255,0.05);
+    color: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+/* OPCIONES DEL SELECT */
+#contacto select.form-control option {
+    background-color: #071A2F;
+    color: #fff;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background-color: var(--color-bg);
+}
+
+.footer h5 {
+    color: var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.footer a:hover {
+    color: var(--color-accent);
+}
+
+.footer hr {
+    height: 1px;
+    background: var(--color-border);
+    border: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    .hero-slide {
+        height: auto;
+        padding: 120px 20px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .hero-slide h1 {
+        font-size: 2rem;
+    }
+}
